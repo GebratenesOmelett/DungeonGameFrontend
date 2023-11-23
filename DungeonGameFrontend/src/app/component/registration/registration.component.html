@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="imageBackground">
+  <div class="center">
+    <div class="loginBox">
+      <form [formGroup]="registerFormGroup" (ngSubmit)="onSubmit()">
+        <div formGroupName="account">
+          <!--          <div *ngIf="loginFailed"-->
+          <!--            class="alert alert-danger mt-1">-->
+          <!--            Login Failed-->
+          <!--          </div>-->
+          <div class="input-group">
+            <label class="label">Username</label>
+            <input required="" class="input" type="text" formControlName="username">
+          </div>
+          <div class="input-group">
+            <label class="label">Email</label>
+            <input required="" class="input" type="email" formControlName="email">
+          </div>
+          <div class="input-group">
+            <label class="label">Password</label>
+            <input required="" class="input" type="text" formControlName="password">
+          </div>
+          <div class="input-group">
+            <label class="label">Repeat Password</label>
+            <input required="" class="input" type="text" formControlName="passwordRepeat">
+          </div>
+        </div>
+        <div>
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

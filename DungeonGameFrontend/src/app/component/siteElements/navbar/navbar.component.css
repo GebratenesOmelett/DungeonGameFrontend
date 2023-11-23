@@ -1,0 +1,40 @@
+.container {
+  position: absolute;
+  width: 100vw;
+}
+
+/* The navbar */
+.navbar {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.49);
+  margin: 1em;
+}
+
+/* Navbar links */
+.leftTopnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.leftTopnav a:hover {
+  color: black;
+  text-shadow: 2px 2px 2px white;
+}
+
+.rightTopnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.rightTopnav a:hover {
+  color: black;
+  text-shadow: 2px 2px 2px white;
+}
