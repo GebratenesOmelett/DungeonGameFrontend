@@ -12,6 +12,6 @@ export class RegisterService {
   constructor(private httpClient: HttpClient) { }
 
   registerPlayer(player: PlayerCreate): Observable<any>{
-    return this.httpClient.post(this.registerUrl, player);
+    return this.httpClient.post<PlayerCreate>(this.registerUrl, player);
   }
 }

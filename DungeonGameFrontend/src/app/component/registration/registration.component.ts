@@ -41,14 +41,17 @@ export class RegistrationComponent implements OnInit{
 
 
   onSubmit() {
-    ``
-    console.log(this.username?.value);
-    console.log(this.email?.value);
-    console.log(this.password?.value);
-    console.log(this.passwordRepeat?.value);
-
     let playerCreate = new PlayerCreate(this.email?.value,this.password?.value,this.username?.value);
 
-    this.registerService.registerPlayer(playerCreate);
+    this.registerService.registerPlayer(playerCreate).subscribe(
+      {
+        next: response =>{
+          alert('utworzono')
+        },
+        error: err =>{
+          alert("coś poszło nie tak")
+        }
+      }
+    );
   }
 }
