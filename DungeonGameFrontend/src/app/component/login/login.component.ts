@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {PlayerLogin} from "../../entity/player/player-login";
+import {LoginService} from "../../service/authorization/login.service";
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,8 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class LoginComponent implements OnInit{
   loginFormGroup!: FormGroup;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+              private loginService: LoginService){
   }
 
   ngOnInit(): void {
@@ -27,6 +30,17 @@ export class LoginComponent implements OnInit{
   }
 
   onSubmit() {
-
+    let playerLogin = new PlayerLogin(this.email?.value, this.password?.value);
+    console.log(playerLogin)
+    this.loginService.loginPLayer(playerLogin).subscribe(
+      {
+        next: response=>{
+          alert("Logged")
+    },
+        error: err => {
+          alert("Nie")
+        }
+      }
+    )
   }
 }
