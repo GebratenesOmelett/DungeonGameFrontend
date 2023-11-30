@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {RegisterService} from "../../service/registration/register.service";
 import {PlayerCreate} from "../../entity/player/player-create";
+import {SuccededService} from "../../service/alerts/succeded.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-registration',
@@ -13,7 +15,9 @@ export class RegistrationComponent implements OnInit{
 
 
   constructor(private formBuilder: FormBuilder,
-              private registerService: RegisterService) {
+              private registerService: RegisterService,
+              private succededService: SuccededService,
+              private route: Router) {
   }
 
   ngOnInit(): void {
@@ -46,7 +50,8 @@ export class RegistrationComponent implements OnInit{
     this.registerService.registerPlayer(playerCreate).subscribe(
       {
         next: response =>{
-          alert('utworzono')
+          this.succededService.showAnimatedDiv();
+          this.route.navigateByUrl("/home")
         },
         error: err =>{
           alert("coś poszło nie tak")

@@ -7,9 +7,10 @@ import { LoginComponent } from './component/login/login.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { SiteComponent } from './component/site/site.component';
 import { NavbarComponent } from './component/siteElements/navbar/navbar.component';
-import {Routes} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {RegisterSuccedComponent} from "./component/siteElements/register-succed/register-succed.component";
+
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {HttpClientModule} from "@angular/common/http";
     LoginComponent,
     RegistrationComponent,
     SiteComponent,
-    NavbarComponent
+    NavbarComponent,
+    RegisterSuccedComponent,
   ],
   imports: [
     BrowserModule,
