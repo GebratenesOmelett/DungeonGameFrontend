@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit{
     this.loginService.loginPLayer(playerLogin).subscribe(
       {
         next: response=>{
+          console.log(response.token)
           alert("Logged")
     },
         error: err => {
