@@ -10,6 +10,10 @@ import { NavbarComponent } from './component/siteElements/navbar/navbar.componen
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {RegisterSuccedComponent} from "./component/siteElements/register-succed/register-succed.component";
+import { MainGameComponent } from './component/main-game/main-game.component';
+import { ChatComponent } from './component/mainGameElements/chat/chat.component';
+import { EquipmentComponent } from './component/mainGameElements/equipment/equipment.component';
+import { ItemsComponent } from './component/mainGameElements/items/items.component';
 
 
 
@@ -21,6 +25,10 @@ import {RegisterSuccedComponent} from "./component/siteElements/register-succed/
     SiteComponent,
     NavbarComponent,
     RegisterSuccedComponent,
+    MainGameComponent,
+    ChatComponent,
+    EquipmentComponent,
+    ItemsComponent,
   ],
   imports: [
     BrowserModule,

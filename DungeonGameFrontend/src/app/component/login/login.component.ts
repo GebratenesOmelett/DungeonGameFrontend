@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {PlayerLogin} from "../../entity/player/player-login";
 import {LoginService} from "../../service/authorization/login.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ import {LoginService} from "../../service/authorization/login.service";
 export class LoginComponent implements OnInit{
   loginFormGroup!: FormGroup;
   constructor(private formBuilder: FormBuilder,
-              private loginService: LoginService){
+              private loginService: LoginService,
+              private route: Router){
   }
 
   ngOnInit(): void {
@@ -36,6 +38,7 @@ export class LoginComponent implements OnInit{
       {
         next: response=>{
           console.log(response.token)
+          this.route.navigateByUrl("/game")
           alert("Logged")
     },
         error: err => {
