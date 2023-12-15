@@ -12,8 +12,10 @@ import {HttpClientModule} from "@angular/common/http";
 import {RegisterSuccedComponent} from "./component/siteElements/register-succed/register-succed.component";
 import { MainGameComponent } from './component/main-game/main-game.component';
 import { ChatComponent } from './component/mainGameElements/chat/chat.component';
-import { EquipmentComponent } from './component/mainGameElements/equipment/equipment.component';
 import { ItemsComponent } from './component/mainGameElements/items/items.component';
+import { NavbarInGameComponent } from './component/mainGameElements/navbar-in-game/navbar-in-game.component';
+import { MonstersComponent } from './component/MainGameElements/monsters/monsters.component';
+import { MovePanelComponent } from './component/mainGameElements/move-panel/move-panel.component';
 
 
 
@@ -27,8 +29,10 @@ import { ItemsComponent } from './component/mainGameElements/items/items.compone
     RegisterSuccedComponent,
     MainGameComponent,
     ChatComponent,
-    EquipmentComponent,
     ItemsComponent,
+    NavbarInGameComponent,
+    MonstersComponent,
+    MovePanelComponent,
   ],
   imports: [
     BrowserModule,

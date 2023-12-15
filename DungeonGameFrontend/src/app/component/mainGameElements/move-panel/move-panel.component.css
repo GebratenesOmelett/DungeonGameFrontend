@@ -1,0 +1,25 @@
+.container {
+  position: absolute;
+  width: 50%;
+  top: 80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.buttons{
+  justify-content: center;
+  align-items: center;
+}
+button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+
+

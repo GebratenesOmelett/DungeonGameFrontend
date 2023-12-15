@@ -1,0 +1,28 @@
+/** {*/
+/*  -webkit-box-sizing:border-box;*/
+/*  -moz-box-sizing:border-box;*/
+/*  -o-box-sizing:border-box;*/
+/*  -ms-box-sizing:border-box;*/
+/*  box-sizing:border-box;*/
+/*}*/
+
+.items{
+  float: left;
+  width: 20%;
+  height: 100%;
+  background-color: #1A1A1A;
+}
+.chat{
+  float: left;
+  width: 20%;
+  height: 100%;
+  background-color: #604444;
+}
+.monster{
+  float: left;
+  width: 60%;
+  height: 100%;
+  background: url("/assets/background/Dungeon.png");
+}
+
+

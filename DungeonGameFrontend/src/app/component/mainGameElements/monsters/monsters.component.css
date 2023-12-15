@@ -1,0 +1,15 @@
+.imageBackground {
+  height: 100vh;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.feature_image img {
+  max-height: 70%;
+  max-width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
