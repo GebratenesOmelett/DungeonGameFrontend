@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class MovePanelComponent {
 
+  attack() {
+    console.log("attack");
+  }
+
+  defence() {
+    console.log("defence");
+  }
+
+  run() {
+    console.log("run");
+  }
 }
