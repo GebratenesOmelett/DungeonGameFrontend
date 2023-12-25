@@ -1,7 +1,13 @@
 <div class="imageBackground">
   <div class="feature_image">
-    <img src="/assets/monsters/Skeleton.png">
-    <app-move-panel></app-move-panel>
+    <div id="prog-bar" class="progress">
+      <div id="myBar" class="progress-bar">
+        <div>{{monster.health}}/{{maxHealth}}</div>
+      </div>
+    </div>
+    <img *ngIf="monster?.name == 'SKELETON'" src="/assets/monsters/Skeleton.png">
+    <img *ngIf="monster?.name == 'SLIME'" src="/assets/monsters/Slime.png">
+    <app-move-panel [monster]="monster" [maxHealth]="maxHealth"></app-move-panel>
   </div>
 
 </div>

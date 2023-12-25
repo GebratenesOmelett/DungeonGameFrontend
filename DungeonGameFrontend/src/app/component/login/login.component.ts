@@ -33,13 +33,10 @@ export class LoginComponent implements OnInit{
 
   onSubmit() {
     let playerLogin = new PlayerLogin(this.email?.value, this.password?.value);
-    console.log(playerLogin)
     this.loginService.loginPLayer(playerLogin).subscribe(
       {
         next: response=>{
-          console.log(response.token)
-          this.route.navigateByUrl("/game")
-          alert("Logged")
+          this.route.navigate(['/game']);
     },
         error: err => {
           alert("Nie")
