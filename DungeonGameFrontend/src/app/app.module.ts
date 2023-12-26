@@ -17,25 +17,29 @@ import {NavbarInGameComponent} from './component/mainGameElements/navbar-in-game
 
 import {MovePanelComponent} from './component/mainGameElements/move-panel/move-panel.component';
 import {MonstersComponent} from "./component/mainGameElements/monsters/monsters.component";
+import { HeroComponent } from './component/mainGameElements/hero/hero/hero.component';
+import {HeroComponent} from "./component/mainGameElements/hero/hero.component";
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    RegistrationComponent,
-    SiteComponent,
-    NavbarComponent,
-    RegisterSuccedComponent,
-    MainGameComponent,
-    ChatComponent,
-    ItemsComponent,
-    NavbarInGameComponent,
-    MonstersComponent,
-    MovePanelComponent,
-    MonstersComponent,
-  ],
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        RegistrationComponent,
+        SiteComponent,
+        NavbarComponent,
+        RegisterSuccedComponent,
+        MainGameComponent,
+        ChatComponent,
+        ItemsComponent,
+        NavbarInGameComponent,
+        MonstersComponent,
+        MovePanelComponent,
+        MonstersComponent,
+        HeroComponent,
+        HeroComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
