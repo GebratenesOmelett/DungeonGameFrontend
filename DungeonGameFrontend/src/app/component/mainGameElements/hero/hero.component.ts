@@ -26,6 +26,7 @@ export class HeroComponent implements OnInit,OnDestroy{
     this.heroSub = this.heroService.getHero().subscribe(hero => {
       this.hero = hero
       this.maxHealth = hero.hp;
+      console.log(hero);
     });
   }
 
