@@ -21,6 +21,7 @@ export class GetHeroByUsernameService {
       return this.httpClient.get<Hero>(getFullHeroUrl, {headers: headers_object}).pipe(tap(
         hero =>{
           this.hero.next(hero);
+          console.log(hero);
         }
       ));
     }));
