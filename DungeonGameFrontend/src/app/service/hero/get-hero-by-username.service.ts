@@ -25,4 +25,7 @@ export class GetHeroByUsernameService {
       ));
     }));
   }
+  getHeroAttackpower(): number{
+    return this.hero.value.attackPower;
+  }
 }

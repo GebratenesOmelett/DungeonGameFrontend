@@ -5,6 +5,23 @@
 }
 .center {
   color: white;
-  margin-top: 50%;
-  padding: 10px;
+  padding-top: 80%;
+
+
+}
+table {
+  width: 100%;
+}
+.main-table{
+  border: 2px white solid;
+  text-align: left;
+  width: 100%;
+}
+th, td {
+  font-size: xx-large;
+  padding-bottom: 10%;
+  padding-right: 10%;
+  overflow: hidden;
+  white-space: nowrap;
+
 }

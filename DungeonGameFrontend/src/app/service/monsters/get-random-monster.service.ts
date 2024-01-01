@@ -20,8 +20,19 @@ export class GetRandomMonsterService {
       return this.httpClient.get<Monster>(this.getRandomMonsterUrl, {headers: headers_object}).pipe(tap(
         monster =>{
           this.monster.next(monster);
+          console.log(monster)
         }
       ));
     }));
+  }
+  getMonsterHealth(): number{
+    return this.monster.value.health
+  }
+  attackMonster(attackPower: number) {
+    this.monster.value.health = this.monster.value.health - attackPower;
+    this.monster.next(this.monster.value);
+  }
+  run(){
+    this.getMonster();
   }
 }
