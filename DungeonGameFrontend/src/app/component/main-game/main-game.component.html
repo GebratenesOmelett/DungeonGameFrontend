@@ -2,10 +2,10 @@
 
 
 <div class="hero">
-  <app-hero></app-hero>
+  <app-hero [hero]="hero" [maxHealth]="maxHealth" ></app-hero>
 </div>
 <div class="monster">
-  <app-monsters></app-monsters>
+  <app-monsters (getHero)="getHero()"></app-monsters>
 </div>
 <div class="chat">
   <app-chat></app-chat>

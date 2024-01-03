@@ -1,13 +1,13 @@
 <div class="imageBackground">
   <div id="prog-bar" class="progress">
     <div id="myBar" class="progress-bar">
-      <div class="health">{{monster.health}}/{{maxHealth}}</div>
+      <div class="health">{{monster?.health}}/{{maxHealth}}</div>
     </div>
   </div>
   <div class="feature_image">
     <img class="monster" *ngIf="monster?.name == 'SKELETON'" src="/assets/monsters/Skeleton.png">
     <img class="monster" *ngIf="monster?.name == 'SLIME'" src="/assets/monsters/Slime.png">
-    <app-move-panel [maxHealth]="maxHealth" (getMonster)="getMonster()"></app-move-panel>
+    <app-move-panel [maxHealth]="maxHealth" (getMonster)="getMonster()" (getHero)="getHeroFromMonster()"></app-move-panel>
   </div>
 
 </div>

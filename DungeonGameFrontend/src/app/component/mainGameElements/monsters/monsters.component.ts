@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {GetRandomMonsterService} from "../../../service/monsters/get-random-monster.service";
 import {Monster} from "../../../entity/monster/monster";
 import {Subscription} from "rxjs";
@@ -9,14 +9,17 @@ import {Subscription} from "rxjs";
   styleUrls: ['./monsters.component.css']
 })
 export class MonstersComponent implements OnInit, OnDestroy {
-
-  public monster!: Monster;
+  @Output("getHero") getHero: EventEmitter<any> = new EventEmitter<any>();
+  public monster: Monster | undefined;
   public maxHealth!: number;
   private monsterSub?: Subscription;
 
   i = 0;
 
   constructor(private monsterService: GetRandomMonsterService) {
+  }
+  getHeroFromMonster(){
+    this.getHero.emit();
   }
 
   ngOnInit(): void {

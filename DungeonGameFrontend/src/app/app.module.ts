@@ -20,6 +20,7 @@ import {HeroComponent} from "./component/mainGameElements/hero/hero.component";
 
 
 
+
 @NgModule({
     declarations: [
         AppComponent,

@@ -10,14 +10,17 @@ import {GetHeroByUsernameService} from "../../../service/hero/get-hero-by-userna
 export class MovePanelComponent {
   @Input() maxHealth!: number;
   @Output("getMonster") getMonster: EventEmitter<any> = new EventEmitter<any>();
+  @Output("getHero") getHero: EventEmitter<any> = new EventEmitter<any>();
   constructor(private monsterService: GetRandomMonsterService,
               private heroService: GetHeroByUsernameService) {
   }
   attack() {
-    this.monsterService.attackMonster(this.heroService.getHeroAttackpower());
+    this.monsterService.attackMonster(this.heroService.getHeroAttackPower());
     this.updateMonsterHealth()
     if(this.monsterService.getMonsterHealth() <= 0){
+      this.heroService.addExperience(10).subscribe();
       this.getMonster.emit();
+      this.getHero.emit();
       this.fullMonsterHealth()
     }
   }
